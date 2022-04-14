@@ -8,6 +8,7 @@ from .views import CategoriesView, ProductListView
 urlpatterns = [
     path('products/', ProductListView.as_view()),
     path('products/<int:id>', ProductListView.get_single),
-    path('categories', CategoriesView.as_view())
+    path('categories', CategoriesView.as_view()),
+    path('categories/<int:id>', CategoriesView.get_single)
 
 ]

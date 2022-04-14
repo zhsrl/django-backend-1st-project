@@ -49,3 +49,7 @@ class CategoriesView(View):
         }
 
         return JsonResponse(categories)
+
+    def get_single(request, id):
+        category = Category.objects.get(id=id)
+        return JsonResponse(category.to_json())
